@@ -7,6 +7,8 @@ public interface ICompte {
 
     void setSolde(double solde);
 
+    void setNumero(int numero);
+
     @Override
     String toString();
 

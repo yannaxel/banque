@@ -31,6 +31,11 @@ public class Compte implements ICompte {
     }
 
     @Override
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    @Override
     public String toString() {
         return "Compte{" +
                 "numero=" + numero +

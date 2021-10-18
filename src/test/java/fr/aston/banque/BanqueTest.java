@@ -1,3 +1,5 @@
+package fr.aston.banque;
+
 import fr.aston.banque.Client;
 import fr.aston.banque.Compte;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,7 +29,7 @@ public class BanqueTest {
 
     @Test
     @DisplayName("addition doit fonctionner")
-    void testAdditionner() {
+    void testAjouterMontant() {
         Compte compte = new Compte(100,100);
         compte.ajouter(10);
         assertEquals(110, compte.getSolde(), "addition de 100€ et 10€ doit donner 110€");
@@ -52,7 +54,7 @@ public class BanqueTest {
     @DisplayName("parce que chaque client est unique")
     void clientUnique(){
         Client client1 = new Client("Payepasdemine","Maurice",62,2156);
-        Client client2 = new Client();
+        Client client2 = new Client("Payepasdemine","Maurice",56,2000);
         // duplication
 //        Client client2 = client1;
         assertNotSame(client1, client2, "les clients doivent etre différents");
